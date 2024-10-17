@@ -1,3 +1,1 @@
-// Notlarsss
-// 1234
-// sdfsf
+// Deneme tamamlandı.
