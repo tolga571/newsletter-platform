@@ -2,7 +2,3 @@
 ## 12345
 ## abcd
 ### deneme
-### deneme
-### deneme
-### deneme
-### deneme
