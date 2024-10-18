@@ -1,9 +1,12 @@
-import React from 'react'
+import Header from "@/app/shared/widgets/header/header";
+import React from "react";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <Header />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
