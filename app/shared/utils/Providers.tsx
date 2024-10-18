@@ -1,0 +1,17 @@
+"use client"
+import {NextUIProvider} from "@nextui-org/react";
+import { usePathname } from "next/navigation";
+
+interface ProviderProps {
+    children: React.ReactNode;
+}
+
+export default function Providers({children}: ProviderProps){
+    const pathname = usePathname();
+
+    return (
+        <NextUIProvider>
+            {pathname === "/dashboard/new-email" && pathname !== "/" && !== "sign-up" && pathname !== "subscribe" && pathname !== "sign-in"}
+        </NextUIProvider>
+    )
+}
