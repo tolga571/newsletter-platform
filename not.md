@@ -1,1 +1,3 @@
-## https://youtu.be/BrrwtCt7d-Y?t=1879
+## https://youtu.be/BrrwtCt7d-Y?t=2074
+
+## navItems dönmüyor ve logo gelmiyor header beyaz body siyah olmalı
