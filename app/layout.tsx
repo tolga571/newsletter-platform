@@ -3,6 +3,12 @@ import localFont from "next/font/local";
 import "../app/shared/styles/globals.css";
 import Providers from "./shared/utils/Providers";
 
+const clashDisplay = localFont({
+  src: "../app/assets/fonts/ClashDisplay-Variable.ttf",
+  variable: "--font-clashDisplay",
+  weight: "700",
+})
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -27,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${clashDisplay.variable}`}
       >
         <Providers>{children}</Providers>
       </body>
