@@ -1,4 +1,4 @@
-## https://youtu.be/BrrwtCt7d-Y?t=2957
+## https://youtu.be/BrrwtCt7d-Y?t=3058
 
 ## navItems aslında dönüyormuş tailwind config'de path ayarı bozuk olduğu için header düzgün görünmüyordu. Düzeltildi.
 
