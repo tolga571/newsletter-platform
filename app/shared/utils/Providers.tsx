@@ -11,7 +11,7 @@ export default function Providers({ children }: ProviderProps) {
 
   return (
     <NextUIProvider>
-      {pathname === "/dashboard/new-email" &&
+      {pathname !== "/dashboard/new-email" &&
       pathname !== "/" &&
       pathname !== "sign-up" &&
       pathname !== "subscribe" &&
