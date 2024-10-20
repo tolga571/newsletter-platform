@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../app/shared/styles/globals.css";
 import Providers from "./shared/utils/Providers";
+import { ClerkProvider } from '@clerk/nextjs'
 
 const clashDisplay = localFont({
   src: "../app/assets/fonts/ClashDisplay-Variable.ttf",
@@ -31,12 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${clashDisplay.variable}`}
-      >
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={`${clashDisplay.variable}`}
+        >
+          <Providers>{children}</Providers>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
