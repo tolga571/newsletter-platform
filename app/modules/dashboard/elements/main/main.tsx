@@ -1,6 +1,7 @@
 "use client";
 
 import DashboardOverviewCard from "@/app/shared/components/cards/overview.card";
+import SubscribersChart from "@/app/shared/components/charts/subscribers.chart";
 import { useUser } from "@clerk/nextjs";
 
 const Main = () => {
@@ -18,6 +19,7 @@ const Main = () => {
         <div className="w-[65%] min-h-[88vh] pr-5">
           <br />
           <DashboardOverviewCard />
+          <SubscribersChart />
         </div>
       </div>
     </div>
