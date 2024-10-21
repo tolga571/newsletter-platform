@@ -4,4 +4,4 @@
 
 ## clerk'in son versiyonunda middleware kısmında değişiklik yapılmış o ayarları hızlı yapılandıramadığım için projedeki versiyonu yükleyerek sorunu çözdüm ve doğrulama koduna ulaştım.
 
-## hadi devam!
+## hadi devam!!
