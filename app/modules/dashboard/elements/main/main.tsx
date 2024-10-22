@@ -5,9 +5,11 @@ import SubscribersChart from "@/app/shared/components/charts/subscribers.chart";
 import { ICONS } from "@/app/shared/utils/icons";
 import { useUser } from "@clerk/nextjs";
 import { Button } from "@nextui-org/react";
+import { useState } from "react";
 
 const Main = () => {
   const { user } = useUser();
+  const [copied, setCopied] = useState(false);
 
   return (
     <div className="p-5 w-full h-screen bg-[#f9fafb]">
@@ -30,6 +32,30 @@ const Main = () => {
               <span className="mr-1 ml-[-5px]">{ICONS.write}</span>
               Start Writing
             </Button>
+          </div>
+          <br />
+          {/* resources */}
+          <div>
+            <h5 className="text-xl font-medium">Resources</h5>
+            <div className="w-full bg-white border rounded p-5 my-3">
+              {/* home page url */}
+              <div>
+                <h4 className="font-medium">Home Page</h4>
+
+                <div
+                  className="w-full px-2 my-1 h-[38px] bg-transparent border rounded-lg relative flex items-center cursor-pointer"
+                  onClick={handleCopyLink}
+                >
+                  <small
+                    className={`w-[70%] text-sm overflow-hidden overflow-ellipsis whitespace-nowrap copy-text ${
+                      copied ? "bg-blue-200" : "bg-transparent"
+                    }`}
+                  >
+
+                  </small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
