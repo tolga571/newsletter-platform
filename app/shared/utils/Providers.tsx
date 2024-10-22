@@ -3,6 +3,7 @@ import { useUser } from "@clerk/nextjs";
 import { NextUIProvider } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 import DashboardSideBar from "../widgets/dashboard/sidebar/dashboard.sidebar";
+import { Toaster } from "react-hot-toast";
 
 interface ProviderProps {
   children: React.ReactNode;
@@ -11,7 +12,7 @@ interface ProviderProps {
 export default function Providers({ children }: ProviderProps) {
   const pathname = usePathname();
 
-  const {isLoaded} = useUser();
+  const { isLoaded } = useUser();
 
   if (!isLoaded) {
     return null;
@@ -33,6 +34,7 @@ export default function Providers({ children }: ProviderProps) {
       ) : (
         <>{children}</>
       )}
+      <Toaster position="top-center" reverseOrder={false} />
     </NextUIProvider>
   );
 }
