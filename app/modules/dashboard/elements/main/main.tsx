@@ -5,6 +5,7 @@ import SubscribersChart from "@/app/shared/components/charts/subscribers.chart";
 import { ICONS } from "@/app/shared/utils/icons";
 import { useUser } from "@clerk/nextjs";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -76,9 +77,51 @@ const Main = () => {
               </div>
             </div>
           </div>
+
+          {/* tutorials */}
+          <div className="w-full bg-white border rounded p-5 my-3">
+            <h5 className="font-medium">Tutorials</h5>
+            <p className="text-sm opacity-[.7}">
+              Learn how to get started on becodemy and ıtilize all our features,
+              directly from the becodemy team.
+            </p>
+            <br />
+            <Button className="bg-[#FBCFE8] text-[#831743] rounded-lg h-[35px] flex items-center">
+                  Tutorials <span>{ICONS.link}</span>
+            </Button>
+          </div>
+
+          {/* Need help? */}
+          <div className="w-full bg-white border rounded p-5 my-3">
+            <h5 className="font-medium">Need help?</h5>
+            <Link href={"/"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+                <span className="text-sm">Knowledge base</span>
+                <span className="ml-1">{ICONS.link}</span>
+              </div>
+            </Link>
+            <Link href={"/"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+                <span className="text-sm">API Documentation</span>
+                <span className="ml-1">{ICONS.link}</span>
+              </div>
+            </Link>
+            <Link href={"/"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+                <span className="text-sm">Blog</span>
+                <span className="ml-1">{ICONS.link}</span>
+              </div>
+            </Link>
+            <Link href={"/"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+                <span className="text-sm">FAQ</span>
+                <span className="ml-1">{ICONS.link}</span>
+              </div>
+            </Link>
+          </div>
+        </div>
         </div>
       </div>
-    </div>
   );
 };
 
